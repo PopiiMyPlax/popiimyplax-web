@@ -1,0 +1,350 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>PopiiMyPlax - Inicio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body {
+            background-color: #0c160a;
+            color: #dae6d3;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+        .hud-bracket-tl {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            border-top: 2px solid #00ff44;
+            border-left: 2px solid #00ff44;
+        }
+        .hud-bracket-br {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 12px;
+            height: 12px;
+            border-bottom: 2px solid #00ff44;
+            border-right: 2px solid #00ff44;
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(0, 255, 68, 0.02) 50%);
+            background-size: 100% 4px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#93000a",
+                        "surface-container-low": "#141e12",
+                        "tertiary-container": "#dcdddd",
+                        "secondary": "#c9c6c5",
+                        "primary": "#ebffe3",
+                        "tertiary": "#f9f9f9",
+                        "surface-tint": "#00e63c",
+                        "on-background": "#dae6d3",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-surface": "#dae6d3",
+                        "on-primary-container": "#007118",
+                        "surface-variant": "#2d382a",
+                        "on-secondary-container": "#bab8b7",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-surface-variant": "#b9ccb2",
+                        "primary-fixed": "#72ff72",
+                        "surface": "#0c160a",
+                        "on-error": "#690005",
+                        "background": "#0c160a",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-primary-fixed": "#002203",
+                        "on-tertiary-container": "#5f6161",
+                        "inverse-on-surface": "#283326",
+                        "outline": "#84967e",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-primary": "#003908",
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#2d382a",
+                        "on-primary-fixed-variant": "#00530f",
+                        "surface-container": "#182216",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "primary-container": "#00ff44",
+                        "on-tertiary": "#2f3131",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-container-lowest": "#071106",
+                        "primary-fixed-dim": "#00e63c",
+                        "inverse-primary": "#006e17",
+                        "on-secondary": "#313030",
+                        "surface-dim": "#0c160a",
+                        "surface-container-high": "#222d20",
+                        "outline-variant": "#3b4b38",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#313c2e",
+                        "inverse-surface": "#dae6d3",
+                        "secondary-container": "#4a4949",
+                        "on-tertiary-fixed": "#1a1c1c"
+                    },
+                    "spacing": {
+                        "container-margin": "32px",
+                        "hud-safe-zone": "40px",
+                        "gutter": "16px",
+                        "unit": "4px",
+                        "element-gap": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "label-mono": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"],
+                        "body-md": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                        "label-mono": ["10px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 left-0 w-full z-50 grid grid-cols-[1fr_auto_1fr] items-center px-8 h-20 bg-zinc-950/95 backdrop-blur-sm border-b-2 border-[#2D2D2D]">
+<div class="text-2xl font-black italic text-[#00FF44] tracking-tighter justify-self-start">PopiiMyPlax</div>
+<div class="hidden md:flex gap-8 items-center justify-self-center">
+<a class="font-['Space_Grotesk'] tracking-tight uppercase font-bold text-[#00FF44] border-b-2 border-[#00FF44] pb-1" href="index.html">Inicio</a>
+<a class="font-['Space_Grotesk'] tracking-tight uppercase font-bold text-zinc-500 hover:text-zinc-200 transition-colors" href="horario.html">Horario</a>
+<a class="font-['Space_Grotesk'] tracking-tight uppercase font-bold text-zinc-500 hover:text-zinc-200 transition-colors" href="clips.html">Clips</a>
+<a class="font-['Space_Grotesk'] tracking-tight uppercase font-bold text-zinc-500 hover:text-zinc-200 transition-colors" href="comunidad.html">Comunidad</a>
+</div>
+<div class="flex items-center gap-4 justify-self-end">
+<span class="flex items-center gap-2 px-3 py-1 bg-zinc-900 border border-[#2D2D2D]">
+<span class="w-2 h-2 bg-[#00FF44] animate-pulse"></span>
+<span class="text-[10px] font-bold tracking-widest text-[#00FF44] uppercase">EN DIRECTO</span>
+</span>
+<button class="bg-[#00FF44] text-zinc-950 px-6 py-2 font-black italic text-sm hover:scale-95 transition-all duration-75 uppercase" onclick="window.open('https://kick.com/PopiiMyPlax','_blank','noopener,noreferrer')">
+                VER CANAL EN KICK
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20 grayscale" data-alt="A professional high-performance gaming setup in a dimly lit room, featuring multiple monitors displaying high-contrast neon green data visualizations and competitive gameplay. The atmosphere is intense and technical, with dark charcoal textures and sharp lighting effects emphasizing a professional streamer workspace. The scene is captured with a shallow depth of field, highlighting technical equipment and peripheral glowing cables in a futuristic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_be5Bzgt6oOdWOdrND65qb9DYvUQtTPelbdk2Xo17zUlxBpdUg0Qw5lCGXGO0-LKN2PnuKrnMUYs4wPEQ-nDAPgz1VziiCsXuqdbm4oQhKYWrEOl-ahapecujWns7vT_U9edU717d3sYofSZ3NnHiSwAgjfdsOh49ip5xJhdblE9x2b4KjZE1MY2wVEWKHxcPc0y_hIUrWUwNNLcj2gsNgeltb928bFHSPdDp-8SKFe2x-IvZrpLnmiUwsagMM3tmyaqzosZsayA">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0c160a] via-transparent to-[#0c160a]/80"></div>
+<div class="absolute inset-0 scanline opacity-30"></div>
+</div>
+<div class="relative z-10 mb-12 md:mb-0 shrink-0 flex flex-col items-center justify-center">
+<div class="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden border-2 border-primary-container/30">
+<img alt="PopiiMyPlax Avatar" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/ADBb0uhguvvl7cw0u6DycofSAiXi5uXn7Ii--xaVyDauVEjrO1Gu3o-fRjc3TbAff4N3O5nhY9U-2PYoXkiyz8yfKjeXHsCJabx4RqoX_VGCB09K40r2eg0cXeIG4cgLnv4zGx91Vr94ndPXDpnrQXjqMglHcJQcdBXm-cyZt4WOAvhRKvmxEvJR9ejviH5N-NqlbYgZ-bWZhGZ_ryHh1odt_EVrqXN7K0IjwO3-fR_IHdNU4SrSQgCung4DvfJzA5Q-t_2XUzHFO-Qe">
+<div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+<div class="hud-bracket-tl"></div>
+<div class="hud-bracket-br"></div>
+<div class="absolute top-2 right-2 flex gap-1">
+<div class="w-1 h-1 bg-primary-container animate-ping"></div>
+<div class="w-1 h-1 bg-primary-container/50"></div>
+</div>
+</div>
+<div class="absolute -bottom-4 -right-4 bg-primary-container text-zinc-950 px-4 py-1 font-black italic text-xs uppercase tracking-tighter">
+        Identity Verified
+    </div>
+</div><div class="relative z-10 max-w-4xl text-center items-center flex flex-col mt-12">
+<h1 class="font-display-xl text-display-xl uppercase text-primary mb-6 leading-none">
+                    SÍGUEME EN <span class="text-primary-container">KICK</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-12 max-w-2xl uppercase tracking-wide">
+                    Directos, entretenimiento, gaming y comunidad en vivo. La nueva era del streaming ha llegado.
+                </p>
+<div class="flex flex-col md:flex-row gap-4 md:justify-start">
+<button class="bg-primary-container text-zinc-950 px-10 py-4 font-black italic text-lg hover:bg-white transition-all duration-75 border-none" onclick="window.open('https://kick.com/PopiiMyPlax','_blank','noopener,noreferrer')">
+                VER CANAL EN KICK
+            </button>
+<button class="bg-transparent border-2 border-primary-container text-primary-container px-10 py-4 font-black italic text-lg hover:bg-primary-container/10 transition-all duration-75">
+                        ÚNETE A LA COMUNIDAD
+                    </button>
+</div>
+</div>
+<!-- Status Badges Float -->
+<div class="relative z-10 mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl px-4 flex flex-col md:flex-row items-center justify-center">
+<div class="bg-zinc-900/50 border border-[#2D2D2D] p-4 flex flex-col items-start relative group">
+<div class="hud-bracket-tl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<span class="text-[10px] font-bold text-zinc-500 uppercase mb-2 tracking-widest">[ ESTADO ]</span>
+<span class="text-primary-container font-bold uppercase tracking-tight">EN DIRECTO</span>
+</div>
+<div class="bg-zinc-900/50 border border-[#2D2D2D] p-4 flex flex-col items-start relative group">
+<div class="hud-bracket-tl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<span class="text-[10px] font-bold text-zinc-500 uppercase mb-2 tracking-widest">[ CATEGORÍA ]</span>
+<span class="text-on-background font-bold uppercase tracking-tight">Gaming</span>
+</div>
+<div class="bg-zinc-900/50 border border-[#2D2D2D] p-4 flex flex-col items-start relative group">
+<div class="hud-bracket-tl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<span class="text-[10px] font-bold text-zinc-500 uppercase mb-2 tracking-widest">[ CONTENIDO ]</span>
+<span class="text-on-background font-bold uppercase tracking-tight">Charlas</span>
+</div>
+<div class="bg-zinc-900/50 border border-[#2D2D2D] p-4 flex flex-col items-start relative group">
+<div class="hud-bracket-tl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<span class="text-[10px] font-bold text-zinc-500 uppercase mb-2 tracking-widest">[ ACCESO ]</span>
+<span class="text-on-background font-bold uppercase tracking-tight">Comunidad</span>
+</div>
+</div>
+</section>
+<!-- Conversion Strip -->
+<section class="bg-primary-container py-6 px-8 flex flex-col md:flex-row justify-between items-center gap-6 relative overflow-hidden">
+<div class="flex items-center gap-4 relative z-10">
+<div class="w-12 h-12 flex items-center justify-center bg-zinc-950 text-primary-container">
+<span class="material-symbols-outlined" data-icon="notification_important">notification_important</span>
+</div>
+<div class="text-zinc-950">
+<h3 class="font-black italic text-xl leading-none uppercase">NO TE PIERDAS EL PRÓXIMO DIRECTO</h3>
+<p class="text-[10px] font-bold tracking-widest uppercase opacity-80">ACTIVA LAS NOTIFICACIONES EN KICK</p>
+</div>
+</div>
+<button class="bg-zinc-950 text-primary-container px-8 py-3 font-black italic text-sm hover:scale-105 transition-transform z-10 uppercase">
+                RECIBIR ALERTA
+            </button>
+<div class="absolute right-0 top-0 opacity-10 pointer-events-none select-none">
+<span class="text-9xl font-black italic text-zinc-950 leading-none select-none">NEXT LIVE</span>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row gap-16 items-start mb-20"><div class="w-full md:w-1/3 shrink-0">
+<div class="relative border border-outline-variant p-2 bg-surface-container-low">
+<div class="hud-bracket-tl"></div>
+<div class="hud-bracket-br"></div>
+<img alt="PopiiMyPlax" class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500 object-top" src="https://lh3.googleusercontent.com/aida/ADBb0uhguvvl7cw0u6DycofSAiXi5uXn7Ii--xaVyDauVEjrO1Gu3o-fRjc3TbAff4N3O5nhY9U-2PYoXkiyz8yfKjeXHsCJabx4RqoX_VGCB09K40r2eg0cXeIG4cgLnv4zGx91Vr94ndPXDpnrQXjqMglHcJQcdBXm-cyZt4WOAvhRKvmxEvJR9ejviH5N-NqlbYgZ-bWZhGZ_ryHh1odt_EVrqXN7K0IjwO3-fR_IHdNU4SrSQgCung4DvfJzA5Q-t_2XUzHFO-Qe">
+<div class="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md border border-primary-container/20 p-3">
+<div class="text-[10px] font-bold text-primary-container uppercase tracking-widest mb-1">ESTADO DEL OPERADOR</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-primary-container rounded-full animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-tight text-on-surface">Online / In-Mission</span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/3">
+<h2 class="font-display-xl text-display-xl uppercase text-primary mb-8 border-l-4 border-primary-container pl-6">
+                        SOBRE EL CANAL
+                    </h2>
+<p class="font-body-lg text-body-lg text-secondary uppercase tracking-tight leading-relaxed">
+                        Bienvenido al cuartel general de PopiiMyPlax. Aquí la precisión técnica se encuentra con el entretenimiento puro. Un espacio dedicado al gaming de alto nivel, entretenimiento puro y una comunidad que no deja de crecer.
+                    </p>
+</div>
+<div class="w-full grid grid-cols-2 gap-4 md:w-1/3">
+<!-- Metric Cards -->
+<div class="border border-[#2D2D2D] p-6 bg-zinc-900/30">
+<div class="text-primary-container font-black text-3xl mb-1">24/7</div>
+<div class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">COMUNIDAD ACTIVA</div>
+</div>
+<div class="border border-[#2D2D2D] p-6 bg-zinc-900/30">
+<div class="text-primary-container font-black text-3xl mb-1">EN VIVO</div>
+<div class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">CALIDAD 4K STREAM</div>
+</div>
+</div>
+</div>
+<!-- Bento Cards -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-zinc-950 border border-[#2D2D2D] p-8 flex flex-col h-full relative group hover:border-primary-container transition-colors">
+<div class="hud-bracket-br"></div>
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6" data-icon="bolt">bolt</span>
+<h4 class="font-headline-md text-headline-md text-primary uppercase mb-4">Directos en vivo</h4>
+<p class="text-secondary font-body-md text-sm uppercase opacity-70">Transmisiones diarias con la mejor interacción en tiempo real.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-zinc-950 border border-[#2D2D2D] p-8 flex flex-col h-full relative group hover:border-primary-container transition-colors">
+<div class="hud-bracket-br"></div>
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6" data-icon="sports_esports">sports_esports</span>
+<h4 class="font-headline-md text-headline-md text-primary uppercase mb-4">Gaming</h4>
+<p class="text-secondary font-body-md text-sm uppercase opacity-70">Gameplay técnico, análisis de títulos y competencia extrema.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-zinc-950 border border-[#2D2D2D] p-8 flex flex-col h-full relative group hover:border-primary-container transition-colors">
+<div class="hud-bracket-br"></div>
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6" data-icon="forum">forum</span>
+<h4 class="font-headline-md text-headline-md text-primary uppercase mb-4">Charlas y actualidad</h4>
+<p class="text-secondary font-body-md text-sm uppercase opacity-70">Debates profundos sobre la industria y contacto directo.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-zinc-950 border border-[#2D2D2D] p-8 flex flex-col h-full relative group hover:border-primary-container transition-colors">
+<div class="hud-bracket-br"></div>
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6" data-icon="groups">groups</span>
+<h4 class="font-headline-md text-headline-md text-primary uppercase mb-4">Comunidad</h4>
+<p class="text-secondary font-body-md text-sm uppercase opacity-70">Un ecosistema diseñado para conectar con otros seguidores.</p>
+</div>
+</div>
+</section>
+<!-- Social Grid -->
+<section class="py-24 bg-zinc-950 border-y-2 border-[#2D2D2D]">
+<div class="px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/3">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-6">CONECTA EN TODAS PARTES</h2>
+<div class="w-24 h-1 bg-primary-container mb-6"></div>
+<p class="text-zinc-500 uppercase text-xs tracking-[0.2em]">CONECTA CON EL SQUAD</p>
+</div>
+<div class="w-full md:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-4"><!-- TikTok -->
+<a class="group relative h-32 border border-[#2D2D2D] bg-zinc-900/20 flex flex-col items-center justify-center gap-2 hover:border-[#00f2ea] transition-all overflow-hidden" href="https://www.tiktok.com/@popiimyplax" target="_blank" rel="noopener noreferrer">
+<div class="absolute top-0 left-0 w-full h-1 bg-[#ff0050] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<img alt="TikTok" class="w-8 h-8 transition-all" src="https://cdn.simpleicons.org/tiktok/FFFFFF">
+<span class="text-zinc-500 group-hover:text-white font-black italic uppercase tracking-widest text-xs">TIKTOK</span>
+<div class="hud-bracket-tl opacity-0 group-hover:opacity-100 !border-[#00f2ea]"></div>
+</a>
+<!-- YouTube -->
+<a class="group relative h-32 border border-[#2D2D2D] bg-zinc-900/20 flex flex-col items-center justify-center gap-2 hover:border-[#FF0000] transition-all overflow-hidden" href="https://youtube.com/PopiiMyPlax" target="_blank" rel="noopener noreferrer">
+<div class="absolute top-0 left-0 w-full h-1 bg-[#FF0000] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<img alt="YouTube" class="w-8 h-8 transition-all" src="https://cdn.simpleicons.org/youtube/FF0000">
+<span class="text-zinc-500 group-hover:text-white font-black italic uppercase tracking-widest text-xs">YOUTUBE</span>
+<div class="hud-bracket-tl opacity-0 group-hover:opacity-100 !border-[#FF0000]"></div>
+</a>
+<!-- Instagram -->
+<a class="group relative h-32 border border-[#2D2D2D] bg-zinc-900/20 flex flex-col items-center justify-center gap-2 hover:border-[#E4405F] transition-all overflow-hidden" href="https://instagram.com/popiimyplax" target="_blank" rel="noopener noreferrer">
+<div class="absolute top-0 left-0 w-full h-1 bg-[#E4405F] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<img alt="Instagram" class="w-8 h-8 transition-all" src="https://cdn.simpleicons.org/instagram/E4405F">
+<span class="text-zinc-500 group-hover:text-white font-black italic uppercase tracking-widest text-xs">INSTAGRAM</span>
+<div class="hud-bracket-tl opacity-0 group-hover:opacity-100 !border-[#E4405F]"></div>
+</a>
+<!-- Discord -->
+<a class="group relative h-32 border border-[#2D2D2D] bg-zinc-900/20 flex flex-col items-center justify-center gap-2 hover:border-[#5865F2] transition-all overflow-hidden" href="https://discord.gg/V7QZxF8JSU" target="_blank" rel="noopener noreferrer">
+<div class="absolute top-0 left-0 w-full h-1 bg-[#5865F2] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<img alt="Discord" class="w-8 h-8 transition-all" src="https://cdn.simpleicons.org/discord/5865F2">
+<span class="text-zinc-500 group-hover:text-white font-black italic uppercase tracking-widest text-xs">DISCORD</span>
+<div class="hud-bracket-tl opacity-0 group-hover:opacity-100 !border-[#5865F2]"></div>
+</a></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 bg-zinc-950 border-t-2 border-[#2D2D2D]">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="text-[#00FF44] font-black italic tracking-tighter text-xl">PopiiMyPlax</div>
+<div class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-zinc-600">
+                © 2024 POPIIMYPLAX.&nbsp;<span style="letter-spacing: 0.1em;" class="">ALL RIGHTS RESERVED.</span><br></div>
+</div>
+<div class="flex gap-6">
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-zinc-600 hover:text-[#00FF44] hover:bg-zinc-900 px-2 py-1 transition-all" href="https://kick.com/PopiiMyPlax" target="_blank" rel="noopener noreferrer">Kick</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-zinc-600 hover:text-[#00FF44] hover:bg-zinc-900 px-2 py-1 transition-all" href="https://youtube.com/PopiiMyPlax" target="_blank" rel="noopener noreferrer">YouTube</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-zinc-600 hover:text-[#00FF44] hover:bg-zinc-900 px-2 py-1 transition-all" href="https://www.tiktok.com/@popiimyplax" target="_blank" rel="noopener noreferrer">TikTok</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-zinc-600 hover:text-[#00FF44] hover:bg-zinc-900 px-2 py-1 transition-all" href="https://instagram.com/popiimyplax" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-zinc-600 hover:text-[#00FF44] hover:bg-zinc-900 px-2 py-1 transition-all" href="https://discord.gg/V7QZxF8JSU" target="_blank" rel="noopener noreferrer">Discord</a>
+<a class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-zinc-600 hover:text-[#00FF44] hover:bg-zinc-900 px-2 py-1 transition-all" href="https://twitter.com/popiimyplax" target="_blank" rel="noopener noreferrer">X</a>
+</div>
+</footer>
+
+
+
+
+</body></html>

@@ -1,0 +1,21 @@
+# Local/project working files
+stitch-export/
+tasks/
+assets/
+src/
+docs/
+amanda.jpg
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx

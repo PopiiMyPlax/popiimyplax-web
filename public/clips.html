@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PopiiMyPlax - Clips</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#454747",
+                      "inverse-primary": "#006e17",
+                      "on-tertiary": "#2f3131",
+                      "inverse-surface": "#dae6d3",
+                      "on-primary-fixed": "#002203",
+                      "outline": "#84967e",
+                      "surface-tint": "#00e63c",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-background": "#dae6d3",
+                      "surface-variant": "#2d382a",
+                      "primary-container": "#00ff44",
+                      "surface-container-highest": "#2d382a",
+                      "primary-fixed-dim": "#00e63c",
+                      "primary": "#ebffe3",
+                      "secondary": "#c9c6c5",
+                      "on-secondary": "#313030",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "surface": "#0c160a",
+                      "background": "#0c160a",
+                      "on-secondary-fixed-variant": "#474646",
+                      "on-surface-variant": "#b9ccb2",
+                      "on-secondary-container": "#bab8b7",
+                      "primary-fixed": "#72ff72",
+                      "on-primary-container": "#007118",
+                      "surface-bright": "#313c2e",
+                      "error": "#ffb4ab",
+                      "on-surface": "#dae6d3",
+                      "tertiary-container": "#dcdddd",
+                      "on-tertiary-container": "#5f6161",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface-container-lowest": "#071106",
+                      "tertiary": "#f9f9f9",
+                      "on-error": "#690005",
+                      "secondary-fixed": "#e5e2e1",
+                      "surface-container-high": "#222d20",
+                      "surface-container-low": "#141e12",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "on-primary-fixed-variant": "#00530f",
+                      "outline-variant": "#3b4b38",
+                      "on-error-container": "#ffdad6",
+                      "surface-container": "#182216",
+                      "surface-dim": "#0c160a",
+                      "error-container": "#93000a",
+                      "secondary-container": "#4a4949",
+                      "on-primary": "#003908",
+                      "inverse-on-surface": "#283326"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "container-margin": "32px",
+                      "unit": "4px",
+                      "element-gap": "8px",
+                      "hud-safe-zone": "40px"
+              },
+              "fontFamily": {
+                      "label-mono": ["Space Grotesk"],
+                      "headline-md": ["Space Grotesk"],
+                      "label-caps": ["Space Grotesk"],
+                      "body-lg": ["Space Grotesk"],
+                      "body-md": ["Space Grotesk"],
+                      "headline-lg": ["Space Grotesk"],
+                      "display-xl": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "label-mono": ["10px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                      "display-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 left-0 w-full z-50 grid grid-cols-[1fr_auto_1fr] items-center px-8 h-20 bg-zinc-950/95 backdrop-blur-sm border-b-2 border-[#2D2D2D]">
+<div class="text-2xl font-black italic text-[#00FF44] tracking-tighter justify-self-start">
+            PopiiMyPlax
+        </div>
+<div class="hidden md:flex gap-8 items-center justify-self-center">
+<a class="font-['Space_Grotesk'] tracking-tight uppercase font-bold text-zinc-500 hover:text-zinc-200 transition-colors" href="index.html">Inicio</a>
+<a class="font-['Space_Grotesk'] tracking-tight uppercase font-bold text-zinc-500 hover:text-zinc-200 transition-colors" href="horario.html">Horario</a>
+<a class="font-['Space_Grotesk'] tracking-tight uppercase font-bold text-[#00FF44] border-b-2 border-[#00FF44] pb-1" href="clips.html">Clips</a>
+<a class="font-['Space_Grotesk'] tracking-tight uppercase font-bold text-zinc-500 hover:text-zinc-200 transition-colors" href="comunidad.html">Comunidad</a>
+</div>
+<div class="flex items-center gap-4 justify-self-end">
+<span class="flex items-center gap-2 px-3 py-1 bg-zinc-900 border border-[#2D2D2D]">
+<span class="w-2 h-2 bg-[#00FF44] animate-pulse"></span>
+<span class="text-[10px] font-bold tracking-widest text-[#00FF44] uppercase">EN DIRECTO</span>
+</span>
+<button class="bg-[#00FF44] text-zinc-950 px-6 py-2 font-black italic text-sm hover:scale-95 transition-all duration-75 uppercase" onclick="window.open('https://kick.com/PopiiMyPlax','_blank','noopener,noreferrer')">
+                VER CANAL EN KICK
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-24 px-gutter md:px-hud-safe-zone max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-16 border-l-4 border-primary-container pl-6">
+<p class="font-label-mono text-label-mono text-primary-container mb-2 uppercase tracking-[0.2em]">[SYSTEM_LOG]: CATEGORY_CLIPS</p>
+<h1 class="font-display-xl text-display-xl text-on-surface mb-2 uppercase italic tracking-tighter">
+                DIRECTOS DESTACADOS
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                LOS MEJORES MOMENTOS DE TWITCH DEL CANAL POPIIMYPLAX
+            </p>
+</header>
+<!-- Clips Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Featured Large Clip -->
+<article class="md:col-span-8 group relative overflow-hidden bg-surface-container border border-outline-variant">
+<div class="absolute top-0 left-0 z-10 p-4">
+<span class="bg-background/80 backdrop-blur-sm border border-primary-container text-primary-container px-3 py-1 font-label-caps text-label-caps uppercase">
+                        DESTACADO
+                    </span>
+</div>
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Clip destacado de Twitch: El buen MOCHAZO y le robo su balleta COMPUESTA" src="https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/9d7d1923-0d45-4537-99ea-74a2244b71e1/landscape/thumb/thumb-0000000000-1664x936.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="font-label-mono text-label-mono text-on-secondary-container mb-1 block uppercase">RUST // 169 VISUALIZACIONES</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase italic">EL BUEN MOCHAZO Y LE ROBO SU BALLETA COMPUESTA</h2>
+</div>
+<div class="text-right">
+<span class="font-label-mono text-label-mono text-on-surface-variant block uppercase">DURACIÓN</span>
+<span class="font-headline-md text-headline-md text-primary-container">00:32</span>
+</div>
+</div>
+<button class="w-full md:w-auto bg-transparent border border-outline text-on-surface px-8 py-3 font-label-caps text-label-caps hover:bg-primary-container hover:text-on-primary-container hover:border-primary-container transition-all flex items-center justify-center gap-2" onclick="window.open('https://www.twitch.tv/popiimyplax/clip/BovineSquareEelSoBayed-nG3hzZ4P86wCIIlR','_blank','noopener,noreferrer')">
+<span class="material-symbols-outlined" data-icon="play_arrow">play_arrow</span>
+                        VER CLIP
+                    </button>
+</div>
+<!-- HUD Brackets -->
+<div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary-container opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary-container opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</article>
+<!-- Side List Items (Clips) -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<!-- Mini Clip Card 1 -->
+<article class="group bg-surface-container-low border border-outline-variant p-4 hover:border-primary-container transition-colors">
+<div class="flex gap-4">
+<div class="w-1/3 aspect-square relative flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Clip de Twitch: Headshot la grulla" src="https://static-cdn.jtvnw.net/twitch-clips/AT-cm%7C483428083-preview-260x147.jpg"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-primary-container/20 transition-all">
+<span class="material-symbols-outlined text-white" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<span class="font-label-mono text-[9px] text-primary-container uppercase">COUNTER-STRIKE // 64 VISTAS</span>
+<h3 class="font-label-caps text-label-caps text-on-surface line-clamp-1">HEADSHOT LA GRULLA</h3>
+</div>
+<div class="flex justify-between items-center mt-2">
+<span class="font-label-mono text-label-mono text-on-surface-variant">00:05</span>
+<button class="text-[10px] font-bold text-primary-container underline underline-offset-4 uppercase tracking-widest" onclick="window.open('https://www.twitch.tv/popiimyplax/clip/CredulousUninterestedSwordPanicVis','_blank','noopener,noreferrer')">VER</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Mini Clip Card 2 -->
+<article class="group bg-surface-container-low border border-outline-variant p-4 hover:border-primary-container transition-colors">
+<div class="flex gap-4">
+<div class="w-1/3 aspect-square relative flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Clip de Twitch: Popii y sus hacks" src="https://static-cdn.jtvnw.net/twitch-clips/AT-cm%7C458799726-preview-260x147.jpg"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-primary-container/20 transition-all">
+<span class="material-symbols-outlined text-white" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<span class="font-label-mono text-[9px] text-primary-container uppercase">PUBG // 52 VISTAS</span>
+<h3 class="font-label-caps text-label-caps text-on-surface line-clamp-1">POPII Y SUS HACKS</h3>
+</div>
+<div class="flex justify-between items-center mt-2">
+<span class="font-label-mono text-label-mono text-on-surface-variant">00:24</span>
+<button class="text-[10px] font-bold text-primary-container underline underline-offset-4 uppercase tracking-widest" onclick="window.open('https://www.twitch.tv/popiimyplax/clip/QuaintShyAniseWholeWheat','_blank','noopener,noreferrer')">VER</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Mini Clip Card 3 -->
+<article class="group bg-surface-container-low border border-outline-variant p-4 hover:border-primary-container transition-colors">
+<div class="flex gap-4">
+<div class="w-1/3 aspect-square relative flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Clip de Twitch: Feliz juagolin" src="https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ce9bffa0-a234-4062-94e1-283ef68852d4/landscape/thumb/thumb-0000000000-1664x936.jpg"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-primary-container/20 transition-all">
+<span class="material-symbols-outlined text-white" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<span class="font-label-mono text-[9px] text-primary-container uppercase">RUST // 37 VISTAS</span>
+<h3 class="font-label-caps text-label-caps text-on-surface line-clamp-1">FELIZ JUAGOLIN</h3>
+</div>
+<div class="flex justify-between items-center mt-2">
+<span class="font-label-mono text-label-mono text-on-surface-variant">00:15</span>
+<button class="text-[10px] font-bold text-primary-container underline underline-offset-4 uppercase tracking-widest" onclick="window.open('https://www.twitch.tv/popiimyplax/clip/CuriousAdorableCatOSsloth-6V412-u3xiEz4lYP','_blank','noopener,noreferrer')">VER</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Secondary Grid -->
+<section class="mt-gutter grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Grid Card 1 -->
+<div class="group relative bg-surface-container-lowest border border-outline-variant">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Clip de Twitch: La buena suerte de popii" src="https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/58d84d71-6c53-43e6-9476-da5481bc74ee/landscape/thumb/thumb-0000000000-1664x936.jpg"/>
+<span class="absolute bottom-2 right-2 bg-zinc-950 text-white font-label-mono text-[10px] px-2 py-1 border border-zinc-700">00:38</span>
+</div>
+<div class="p-4">
+<div class="flex justify-between mb-2">
+<span class="text-primary-container font-label-mono text-[10px] uppercase tracking-wider">RUST</span>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 bg-primary-container block"></span>
+<span class="font-label-mono text-[10px] text-on-surface-variant">33 VISTAS</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4 uppercase text-lg line-clamp-1">LA BUENA SUERTE DE POPII</h4>
+<button class="w-full border border-outline text-on-surface py-2 font-label-caps text-label-caps hover:bg-primary-container hover:text-on-primary-container transition-all uppercase skew-x-[-10deg]" onclick="window.open('https://www.twitch.tv/popiimyplax/clip/SavoryBelovedWormKappaWealth-M14vrR0g-SIuc5Dg','_blank','noopener,noreferrer')">
+                        VER CLIP
+                    </button>
+</div>
+</div>
+<!-- Grid Card 2 -->
+<div class="group relative bg-surface-container-lowest border border-outline-variant">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Clip de Twitch: ya no habra soxe" src="https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/ab57baf6-bc74-4636-bf67-533eb1b420ce/landscape/thumb/thumb-0000000000-1920x1080.jpg"/>
+<span class="absolute bottom-2 right-2 bg-zinc-950 text-white font-label-mono text-[10px] px-2 py-1 border border-zinc-700">00:29</span>
+</div>
+<div class="p-4">
+<div class="flex justify-between mb-2">
+<span class="text-primary-container font-label-mono text-[10px] uppercase tracking-wider">RUST</span>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 bg-primary-container block"></span>
+<span class="font-label-mono text-[10px] text-on-surface-variant">30 VISTAS</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4 uppercase text-lg line-clamp-1">YA NO HABRA SOXE</h4>
+<button class="w-full border border-outline text-on-surface py-2 font-label-caps text-label-caps hover:bg-primary-container hover:text-on-primary-container transition-all uppercase skew-x-[-10deg]" onclick="window.open('https://www.twitch.tv/popiimyplax/clip/SparklingHilariousPhoneFailFish-aDpOaO5szNWLFHoW','_blank','noopener,noreferrer')">
+                        VER CLIP
+                    </button>
+</div>
+</div>
+<!-- Grid Card 3 -->
+<div class="group relative bg-surface-container-lowest border border-outline-variant">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Clip de Twitch: NINJA KILLER smoke with horca" src="https://static-cdn.jtvnw.net/twitch-video-assets/twitch-vap-video-assets-prod-us-west-2/1dbcfb0a-6028-43c5-8104-2d1c76a6281a/landscape/thumb/thumb-0000000000-1920x1080.jpg"/>
+<span class="absolute bottom-2 right-2 bg-zinc-950 text-white font-label-mono text-[10px] px-2 py-1 border border-zinc-700">01:00</span>
+</div>
+<div class="p-4">
+<div class="flex justify-between mb-2">
+<span class="text-primary-container font-label-mono text-[10px] uppercase tracking-wider">RUST</span>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 bg-primary-container block"></span>
+<span class="font-label-mono text-[10px] text-on-surface-variant">28 VISTAS</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4 uppercase text-lg line-clamp-1">NINJA KILLER SMOKE WITH HORCA</h4>
+<button class="w-full border border-outline text-on-surface py-2 font-label-caps text-label-caps hover:bg-primary-container hover:text-on-primary-container transition-all uppercase skew-x-[-10deg]" onclick="window.open('https://www.twitch.tv/popiimyplax/clip/ColorfulNastyFishOpieOP-o1aBWsbNTXxq164g','_blank','noopener,noreferrer')">
+                        VER CLIP
+                    </button>
+</div>
+</div>
+</section>
+<!-- Global CTA -->
+<div class="mt-20 flex flex-col items-center justify-center">
+<div class="w-full h-[1px] bg-gradient-to-r from-transparent via-outline-variant to-transparent mb-12"></div>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="relative group px-12 py-6 bg-transparent border border-primary-container text-primary-container font-headline-md text-headline-md uppercase tracking-widest skew-x-[-10deg] hover:text-primary hover:border-primary-container hover:shadow-[0_0_28px_rgba(0,255,68,0.45)] hover:bg-primary-container/10 hover:scale-105 active:scale-95 transition-all duration-300" onclick="window.open('https://www.twitch.tv/popiimyplax/clips?range=all','_blank','noopener,noreferrer')">
+<div class="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-primary-container group-hover:-translate-x-1 group-hover:-translate-y-1 transition-transform"></div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-primary-container group-hover:translate-x-1 group-hover:translate-y-1 transition-transform"></div>
+                VER MÁS CONTENIDO EN TWITCH
+            </button>
+<button class="relative group px-12 py-6 bg-transparent border border-primary-container text-primary-container font-headline-md text-headline-md uppercase tracking-widest skew-x-[-10deg] hover:text-primary hover:border-primary-container hover:shadow-[0_0_28px_rgba(0,255,68,0.45)] hover:bg-primary-container/10 hover:scale-105 active:scale-95 transition-all duration-300" onclick="window.open('https://kick.com/PopiiMyPlax','_blank','noopener,noreferrer')">
+<div class="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-primary-container group-hover:-translate-x-1 group-hover:-translate-y-1 transition-transform"></div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-primary-container group-hover:translate-x-1 group-hover:translate-y-1 transition-transform"></div>
+                VER MÁS CONTENIDO EN KICK
+            </button>
+</div>
+<p class="mt-6 font-label-mono text-label-mono text-on-surface-variant uppercase tracking-[0.3em]">REPOSITORIO DE DATOS ACTUALIZADO</p>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full border-t border-zinc-800 bg-zinc-950 py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-[#00FF44] font-black italic tracking-tighter text-xl">
+            PopiiMyPlax
+        </div>
+<div class="flex flex-wrap justify-center gap-6 font-['Space_Grotesk'] text-[10px] tracking-[0.2em] uppercase text-zinc-600">
+<a class="hover:text-green-400 underline decoration-2 underline-offset-4 transition-all duration-300 ease-in-out" href="https://kick.com/PopiiMyPlax" target="_blank" rel="noopener noreferrer">KICK</a>
+<a class="hover:text-green-400 underline decoration-2 underline-offset-4 transition-all duration-300 ease-in-out" href="https://youtube.com/PopiiMyPlax" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
+<a class="hover:text-green-400 underline decoration-2 underline-offset-4 transition-all duration-300 ease-in-out" href="https://www.tiktok.com/@popiimyplax" target="_blank" rel="noopener noreferrer">TIKTOK</a>
+<a class="hover:text-green-400 underline decoration-2 underline-offset-4 transition-all duration-300 ease-in-out" href="https://instagram.com/popiimyplax" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+<a class="hover:text-green-400 underline decoration-2 underline-offset-4 transition-all duration-300 ease-in-out" href="https://discord.gg/V7QZxF8JSU" target="_blank" rel="noopener noreferrer">DISCORD</a>
+<a class="hover:text-green-400 underline decoration-2 underline-offset-4 transition-all duration-300 ease-in-out" href="https://twitter.com/popiimyplax" target="_blank" rel="noopener noreferrer">X</a>
+<a class="hover:text-green-400 underline decoration-2 underline-offset-4 transition-all duration-300 ease-in-out" href="legal.html">LEGAL</a>
+</div>
+<div class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em] uppercase text-zinc-500">
+            © 2024 POPIIMYPLAX [SYSTEM_LOG] ALL RIGHTS RESERVED
+        </div>
+</footer>
+</body></html>
